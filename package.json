@@ -1,0 +1,16 @@
+{
+  "name": "ravistores-payment-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RaviStores limited-time payment page with expiring UPI QR sessions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "qrcode": "^1.5.4"
+  }
+}
