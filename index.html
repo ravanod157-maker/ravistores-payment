@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RaviStores • Secure Payment</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="brand">RAVI<span>STORES</span></div>
+      <h1>Complete your payment</h1>
+      <p class="muted">Scan the QR code using your UPI app.</p>
+
+      <div class="amount-row">
+        <label for="amount">Amount</label>
+        <div class="amount-input">
+          <span>₹</span>
+          <input id="amount" type="number" min="1" step="1" value="499">
+        </div>
+      </div>
+
+      <button id="createBtn" class="primary">Generate Payment QR</button>
+
+      <div id="paymentBox" class="hidden">
+        <div class="timer-wrap">
+          <div class="timer-label">QR active for</div>
+          <div id="timer" class="timer">10:00</div>
+        </div>
+
+        <div class="qr-wrap">
+          <img id="qr" alt="UPI payment QR">
+        </div>
+
+        <p class="upi" id="upiText">UPI payment</p>
+
+        <button id="upiBtn" class="secondary">Open UPI App</button>
+
+        <div id="expired" class="expired hidden">
+          <strong>Payment window expired</strong>
+          <span>This QR is no longer active.</span>
+          <button id="newBtn" class="primary">Generate New QR</button>
+        </div>
+      </div>
+
+      <div class="notice">
+        <strong>Important:</strong> Keep this page open until payment is completed.
+        The countdown controls this payment session's QR display.
+      </div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
